@@ -36,3 +36,8 @@
 //!
 //! # Features
 //! (TBD)
+
+pub use fst::Fst;
+pub use fst::FstBuilder;
+
+pub mod fst;
