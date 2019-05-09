@@ -1,0 +1,27 @@
+[package]
+name = "fst-rs"
+version = "0.1.0-alpha.0"
+authors = ["Sho Nakatani <lay.sakura@gmail.com>"]
+description = "FST (Fast Succinct Trie) implementation in Rust"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/laysakura/fst-rs"
+homepage = "https://github.com/laysakura/fst-rs"
+keywords = ["fst", "fast-succinct-trie", "surf", "louds-ds"] # up to 5 keywords, each keyword should have <= 20 chars
+categories = ["compression", "data-structures"]
+edition = "2018"
+
+[dependencies]
+fid-rs = "0.1"
+
+[dev-dependencies]
+criterion = "0.2"
+
+[[bench]]
+name = "bench"
+harness = false
+
+[package.metadata.release]
+tag-prefix = "v"
+pre-release-hook = ["emacs", "CHANGELOG.md"]  # Finally, I found this hook so effective!!
+disable-publish = true
